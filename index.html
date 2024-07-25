@@ -9,64 +9,116 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assest/style/index.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Form</h1>
-    <form class="form">
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Company names</label>
-        <input
-          type="text"
-          class="form-control"
-          id="company"
-          aria-describedby="emailHelp"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">City</label>
-        <input type="text" class="form-control" id="city" />
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Country</label>
-        <input type="text" class="form-control" id="country" />
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Id</label>
-        <input type="text" class="form-control" id="id" />
-      </div>
+    <form action="" class="loginform">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./basket.html">Basket</a>
+              </li>
 
-      <input type="submit" class="btn btn-primary" value="submit" />
-      <button class="btn btn-secondary post">post</button>
-      <button class="btn btn-secondary put">put</button>
-      <button class="btn btn-secondary patch">patch</button>
+              <li class="nav-item">
+                <a class="nav-link" href="./sign.html">Sign</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./wishlist.html"
+                  >Wishlist</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="login">
+        <h2>Login</h2>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Username</span>
+          <input
+            type="text"
+            class="form-control userInp"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text passInp" id="basic-addon1"
+            >Password</span
+          >
+          <input
+            type="text"
+            class="form-control passInp"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <input type="submit" class="btn btn-primary" />
+      </div>
     </form>
-    <h1 class="h2">TABLE</h1>
-    <table class="table table-dark table-striped">
-      <thead>
-        <th>company name</th>
-        <th>city</th>
-        <th>country</th>
-        <th>info</th>
-        <th>delete</th>
-      </thead>
-      <tbody>
-        <!-- <tr class="table-active">
-          <td>Data</td>
-          <td>Data</td>
-          <td>Data</td>
-          <td><button class="btn btn-warning">info</button></td>
-          <td><button class="btn btn-danger">delete</button></td>
-        </tr> -->
-      </tbody>
-    </table>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <div class="product">
+      <!-- <div class="card" style="width: 18rem">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> -->
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="./add.js"></script>
+    <script src="./assest/script/app.js"></script>
   </body>
 </html>
