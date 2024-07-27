@@ -45,29 +45,21 @@ fetch(base_url + "singers")
                 ${element.name} is ${element.nationality}
                 </p>
                 <button class="btn btn-outline-primary" name ="${element.id}">Detail</button>
-                <button class="btn btn-outline-danger" name ="${element.id}"><i class="fa-solid fa-trash"></i></button>
+                <button class="btn btn-outline-danger delete" name ="${element.id}"><i class="fa-solid fa-trash"></i></button>
               <button class="btnfav"> <i class="fa-regular fa-heart " ></i></button>
               </div>
             </div>
           </div>
                   `;
-    });
-    let btnfav = document.querySelector(".btnfav");
-    let arr;
+      //Delete
+      let deleteBtn = document.querySelectorAll(".delete");
 
-    if (localStorage.getItem("basket")) {
-      arr = JSON.parse(localStorage.getItem("basket"));
-    } else {
-      arr = [];
-    }
-    for (let btn of btnfav) {
-      btn.addEventListener("click", function () {
-        console.log(this.name);
-        arr.push(this.name);
-        console.log(arr);
-        localStorage.setItem("basket", JSON.stringify(arr));
-      });
-    }
+      for (let btn of deleteBtn) {
+        btn.addEventListener("click", function () {
+          console.log(this.parentElement.remove());
+        });
+      }
+    });
   });
 
 fetch(base_url + "singers")
@@ -84,12 +76,40 @@ fetch(base_url + "singers")
           <p class="card-text" >
           ${element.name} is ${element.nationality}
           </p>
-          <button class="btn btn-outline-primary" name ="${element.id}">Detail</button>
-          <button class="btn btn-outline-danger" name ="${element.id}"><i class="fa-solid fa-trash"></i></button>
+          <a href="./detail.html?id=${element.id}" class="detail"><button class="btn btn-outline-primary ">Detail</button></a>
+          
+          <button class="btn btn-outline-danger delete" name ="${element.id}"><i class="fa-solid fa-trash"></i></button>
          <button class="btnfav" > <i class="fa-regular fa-heart " ></i></button>
         </div>
       </div>
     </div>
             `;
+      //Delete
+      let deleteBtn = document.querySelectorAll(".delete");
+
+      for (let btn of deleteBtn) {
+        btn.addEventListener("click", function () {
+          console.log(this.parentElement.parentElement.remove());
+        });
+      }
+      //Detail
+
+      let arr;
+
+      if (localStorage.getItem("detail")) {
+        arr = JSON.parse(localStorage.getItem("detail"));
+      } else {
+        arr = [];
+      }
+      for (let btn of detail) {
+        btn.addEventListener("click", function () {
+          console.log(this.name);
+          arr.push(this.name);
+          console.log(arr);
+          localStorage.setItem("detail", JSON.stringify(arr));
+        });
+      }
     });
+    let detail = document.querySelectorAll(".detail");
+    console.log(detail);
   });

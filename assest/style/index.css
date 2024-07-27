@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
 .login {
   margin: 0 auto;

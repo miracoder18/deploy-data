@@ -90,5 +90,94 @@
       "age": 37,
       "genre": "Pop"
     }
+  ],
+  "meals": [
+    {
+      "id": "1",
+      "name": "Spaghetti Bolognese",
+      "price": 12.99,
+      "ingredients": [
+        "Spaghetti",
+        "Ground Beef",
+        "Tomato Sauce",
+        "Onions",
+        "Garlic",
+        "Parmesan Cheese",
+        "Olive Oil",
+        "Spices"
+      ],
+      "imageLink": "https://i0.wp.com/chefrafaelgonzalez.com/wp-content/uploads/2022/07/bolognese-tasty.png?fit=1080%2C1080&ssl=1"
+    },
+    {
+      "id": "2",
+      "name": "Chicken Alfredo",
+      "price": 14.99,
+      "ingredients": [
+        "Fettuccine Pasta",
+        "Grilled Chicken",
+        "Alfredo Sauce",
+        "Garlic",
+        "Butter",
+        "Parmesan Cheese",
+        "Parsley"
+      ],
+      "imageLink": "https://img.freepik.com/free-photo/ai-generated-pasta_23-2150637314.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Vegetable Stir-Fry",
+      "price": 10.99,
+      "ingredients": [
+        "Mixed Vegetables",
+        "Tofu",
+        "Soy Sauce",
+        "Ginger",
+        "Garlic",
+        "Sesame Oil",
+        "Rice"
+      ],
+      "imageLink": "https://png.pngtree.com/png-vector/20210912/ourlarge/pngtree-stir-fried-spinach-png-image_3911746.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Margherita Pizza",
+      "price": 9.99,
+      "ingredients": [
+        "Pizza Dough",
+        "Tomatoes",
+        "Fresh Basil",
+        "Mozzarella Cheese",
+        "Olive Oil",
+        "Salt"
+      ],
+      "imageLink": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsqdjdqtXvZAjtpoCR5iAImOateW6hNQ0eHg&usqp=CAU"
+    },
+    {
+      "id": "5",
+      "name": "Caesar Salad",
+      "price": 7.99,
+      "ingredients": [
+        "Romaine Lettuce",
+        "Croutons",
+        "Parmesan Cheese",
+        "Caesar Dressing"
+      ],
+      "imageLink": "https://www.nicepng.com/png/detail/37-370413_classic-caesar-salad-ensalada-cesar-fosters-hollywood.png"
+    },
+    {
+      "id": "6",
+      "name": "Beef Tacos",
+      "price": 11.99,
+      "ingredients": [
+        "Ground Beef",
+        "Taco Shells",
+        "Lettuce",
+        "Tomatoes",
+        "Cheese",
+        "Salsa",
+        "Sour Cream"
+      ],
+      "imageLink": "https://png.pngtree.com/png-vector/20230912/ourmid/pngtree-mexican-beef-tacos-with-vegetables-png-image_10016658.png"
+    }
   ]
 }

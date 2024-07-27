@@ -1,17 +1,13 @@
+let base_url = "http://localhost:3000/";
 let box = document.querySelector(".meals");
 
-let url = "http://localhost:3000/meals";
-
-fetch(url)
+fetch(base_url + "meals")
   .then((res) => res.json())
   .then((data) => {
     console.log(data);
-    let arr = JSON.parse(localStorage.getItem("basket"));
-    console.log(arr);
     data.forEach((element) => {
-      arr.forEach((id) => {
-        if (id == element.id) {
-          box.innerHTML += `<div class="meals">
+      box.innerHTML += `
+                   
             <div class="card" style="width: 18rem">
               <img src="${element.imageLink}" class="card-img-top" alt="..." />
               <div class="card-body">
@@ -25,8 +21,33 @@ fetch(url)
               <button class="btn btn-success basket" name ="${element.id}">Basket</button>
               </div>
             </div>
-          </div>`;
-        }
-      });
+          
+                  `;
+      //Delete
+      let deleteBtn = document.querySelectorAll(".delete");
+
+      for (let btn of deleteBtn) {
+        btn.addEventListener("click", function () {
+          console.log(this.parentElement.parentElement.remove());
+        });
+      }
+      //Basket
+      let basket = document.querySelectorAll(".basket");
+      let arr;
+
+      if (localStorage.getItem("basket")) {
+        arr = JSON.parse(localStorage.getItem("basket"));
+      } else {
+        arr = [];
+      }
+      for (let btn of basket) {
+        btn.addEventListener("click", function () {
+          console.log(this.name);
+          arr.push(this.name);
+          console.log(arr);
+          localStorage.setItem("basket", JSON.stringify(arr));
+        });
+      }
+
     });
   });
